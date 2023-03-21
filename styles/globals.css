@@ -1,3 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-stone-50 text-stone-700;
+  }
+
+  body {
+    @apply w-full max-w-screen-md mx-auto px-2;
+  }
+}
+
+@layer components {
+  h1 {
+    @apply text-5xl max-sm:text-4xl font-black text-slate-900;
+  }
+
+  h2,
+  h3 {
+    @apply font-medium text-slate-800;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  a {
+    @apply text-amber-400 hover:text-amber-500 active:text-amber-600 underline transition-colors;
+  }
+
+  p {
+    @apply my-2;
+  }
+}
+
+@layer utilities {
+  .shiny {
+    @apply bg-gradient-to-r bg-[length:200%] bg-left drop-shadow-sm;
+    transform: rotateY(-25deg) scale(1.05);
+    animation-fill-mode: forwards;
+  }
+
+  .perspective {
+    perspective: 75em;
+  }
+}
