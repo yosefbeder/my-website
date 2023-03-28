@@ -50,20 +50,20 @@ const work = [
 
 const Header: React.FC = () => {
   return (
-    <header className="flex max-md:flex-col max-md:items-center gap-6 py-6 perspective">
+    <header className="flex max-md:flex-col max-md:items-center gap-6 py-6 perspective perspective-sm max-md:perspective-md">
       <img
         className="w-60 max-sm:w-48 rounded-full"
         src="https://avatars.githubusercontent.com/u/78495625?v=4"
         alt="Portrait"
       />
-      <div className="flex flex-col gap-6 max-md:items-center">
-        <h1 className="text-stone-900">
+      <div className="flex flex-col gap-6 max-md:items-center inherit-transform-style">
+        <h1 className="text-stone-900 inherit-transform-style">
           <span className="inline-block animate-[wave_1s_1s]">👋</span> Hey, I'm{" "}
           <strong className="inline-block shiny from-amber-600 via-amber-400 to-amber-600 bg-clip-text text-transparent animate-[shine_500ms_2s]">
             Yosef
           </strong>
         </h1>
-        <div className="flex flex-wrap gap-2 max-w-md max-md:justify-center">
+        <div className="flex flex-wrap gap-2 max-w-md max-md:justify-center inherit-transform-style">
           {tags.map((tag, index) => (
             <div
               key={index}

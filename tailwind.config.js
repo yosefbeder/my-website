@@ -34,7 +34,7 @@ module.exports = {
         shine: {
           to: {
             backgroundPosition: "right",
-            transform: "rotateY(0) rotateZ(0) scale(1)",
+            transform: "rotateY(0) translateY(0)",
             filter: "none",
           },
         },

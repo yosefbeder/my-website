@@ -43,11 +43,24 @@
 @layer utilities {
   .shiny {
     @apply bg-gradient-to-r bg-[length:200%] bg-left drop-shadow-sm;
-    transform: rotateY(-25deg) scale(1.05);
+    transform: rotateY(-25deg) translateY(-0.25rem);
     animation-fill-mode: forwards;
   }
-
   .perspective {
-    perspective: 75em;
+    transform-style: preserve-3d;
+  }
+
+  @responsive {
+    .perspective-sm {
+      transform: perspective(35em);
+    }
+
+    .perspective-md {
+      transform: perspective(65em);
+    }
+  }
+
+  .inherit-transform-style {
+    transform-style: inherit;
   }
 }
