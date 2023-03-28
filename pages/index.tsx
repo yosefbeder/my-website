@@ -63,7 +63,7 @@ const Header: React.FC = () => {
             Yosef
           </strong>
         </h1>
-        <div className="flex flex-wrap gap-2 max-w-md max-md:justify-center inherit-transform-style">
+        <div className="flex flex-wrap gap-2 max-md:gap-1.5 max-w-md max-md:justify-center inherit-transform-style">
           {tags.map((tag, index) => (
             <div
               key={index}
