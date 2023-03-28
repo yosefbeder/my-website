@@ -41,11 +41,16 @@
 }
 
 @layer utilities {
+  .section {
+    @apply flex flex-col gap-6 max-md:gap-4 py-6 max-md:py-4;
+  }
+
   .shiny {
     @apply bg-gradient-to-r bg-[length:200%] bg-left drop-shadow-sm;
     transform: rotateY(-25deg) translateY(-0.25rem);
     animation-fill-mode: forwards;
   }
+
   .perspective {
     transform-style: preserve-3d;
   }
@@ -53,10 +58,12 @@
   @responsive {
     .perspective-sm {
       transform: perspective(35em);
+      transform-origin: center;
     }
 
     .perspective-md {
       transform: perspective(65em);
+      transform-origin: 50% 75%;
     }
   }
 

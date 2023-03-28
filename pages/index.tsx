@@ -50,13 +50,13 @@ const work = [
 
 const Header: React.FC = () => {
   return (
-    <header className="flex max-md:flex-col max-md:items-center gap-6 py-6 perspective perspective-sm max-md:perspective-md">
+    <header className="flex max-md:flex-col max-md:items-center gap-6 max-md:gap-4 py-6 max-md:py-4 perspective perspective-sm max-md:perspective-md">
       <img
         className="w-60 max-sm:w-48 rounded-full"
         src="https://avatars.githubusercontent.com/u/78495625?v=4"
         alt="Portrait"
       />
-      <div className="flex flex-col gap-6 max-md:items-center inherit-transform-style">
+      <div className="flex flex-col gap-6 max-md:gap-4 max-md:items-center inherit-transform-style">
         <h1 className="text-stone-900 inherit-transform-style">
           <span className="inline-block animate-[wave_1s_1s]">👋</span> Hey, I'm{" "}
           <strong className="inline-block shiny from-amber-600 via-amber-400 to-amber-600 bg-clip-text text-transparent animate-[shine_500ms_2s]">
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
 
 const Work: React.FC = () => {
   return (
-    <section className="flex flex-col gap-6 py-6">
+    <section className="section">
       <h2 className="text-center">Work</h2>
       {work.map(({ name, screenshots, description, tech, link, code }) => (
         <article className="relative max-w-screen-md mx-auto pb-10 max-md:pb-0 max-md:shadow-lg max-md:rounded-md max-md:overflow-hidden">
@@ -126,7 +126,7 @@ const Work: React.FC = () => {
 
 const Writing: React.FC = () => {
   return (
-    <section className="flex flex-col gap-6 py-6">
+    <section className="section">
       <h2 className="text-center">Writing</h2>
       {blog
         .slice(0, 3)

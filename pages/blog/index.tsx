@@ -4,7 +4,7 @@ import blog from "../../data/blog.json";
 
 const Blog: NextPage = () => {
   return (
-    <main className="flex flex-col gap-6 py-6">
+    <main className="section">
       <h1>Blog</h1>
       {blog
         .map(({ title, date, description }) => ({

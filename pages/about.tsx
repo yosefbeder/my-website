@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps<AboutProps> = async () => {
 
 const About: NextPage<AboutProps> = ({ content }) => {
   return (
-    <main className="flex flex-col gap-6 py-6">
+    <main className="section">
       <h1>About</h1>
       <article dangerouslySetInnerHTML={{ __html: content }}></article>
     </main>
