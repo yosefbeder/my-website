@@ -3,9 +3,9 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col py-6 gap-6 items-center">
+    <footer className="section items-center">
       <SocialMediaIcons />
-      <p>Copyright © 2023 Yosef Beder</p>
+      <p className="text-sm">Copyright © 2023 Yosef Beder</p>
     </footer>
   );
 };
