@@ -57,7 +57,7 @@ const Header: React.FC = () => {
         alt="Portrait"
       />
       <div className="flex flex-col gap-6 max-md:gap-4 max-md:items-center inherit-transform-style">
-        <h1 className="text-stone-900 inherit-transform-style">
+        <h1 className="text-stone-900 inherit-transform-style w-max">
           <span className="inline-block animate-[wave_1s_1s]">👋</span> Hey, I'm{" "}
           <strong className="inline-block shiny from-amber-600 via-amber-400 to-amber-600 bg-clip-text text-transparent animate-[shine_500ms_2s]">
             Yosef
