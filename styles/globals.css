@@ -58,16 +58,15 @@
 
   .perspective {
     transform-style: preserve-3d;
+    transform: perspective(35em);
   }
 
   @responsive {
-    .perspective-sm {
-      transform: perspective(35em);
+    .transform-center {
       transform-origin: center;
     }
 
-    .perspective-md {
-      transform: perspective(65em);
+    .transform-75\% {
       transform-origin: 50% 75%;
     }
   }
