@@ -93,7 +93,7 @@ const Work: React.FC = () => {
             src={screenshots}
             alt={`${name} screenshots`}
           />
-          <div className="absolute right-0 bottom-0 max-md:relative flex flex-col gap-2 p-2 rounded-md max-md:rounded-none bg-stone-50 w-1/2 max-md:w-full shadow-lg max-md:shadow-none">
+          <div className="absolute right-0 bottom-0 max-md:relative flex flex-col gap-2 p-2 rounded-md max-md:rounded-none bg-white w-1/2 max-md:w-full shadow-lg max-md:shadow-none">
             <h3>{name}</h3>
             <div className="flex gap-2">
               {tech.map((item) => {
