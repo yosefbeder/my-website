@@ -15,7 +15,7 @@ const navItems: Map<
     "/",
     {
       name: "home",
-      width: 59,
+      width: 63,
       x: 0,
     },
   ],
@@ -23,16 +23,16 @@ const navItems: Map<
     "/about",
     {
       name: "about",
-      width: 60,
-      x: 83,
+      width: 64,
+      x: 87,
     },
   ],
   [
     "/blog",
     {
       name: "blog",
-      width: 50,
-      x: 167,
+      width: 52,
+      x: 175,
     },
   ],
 ]);
