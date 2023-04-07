@@ -87,7 +87,7 @@ const Work: React.FC = () => {
     <section className="section">
       <h2 className="text-center">Work</h2>
       {work.map(({ name, screenshots, description, tech, link, code }) => (
-        <article className="relative max-w-screen-md mx-auto pb-10 max-md:pb-0 max-md:shadow-lg max-md:rounded-md max-md:overflow-hidden">
+        <article className="relative max-w-screen-md w-full mx-auto pb-10 max-md:pb-0 max-md:shadow-lg max-md:rounded-md max-md:overflow-hidden">
           <img
             className="w-5/6 max-md:w-full rounded-md max-md:rounded-none"
             src={screenshots}
