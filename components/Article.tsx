@@ -11,7 +11,7 @@ interface ArticleProps {
 const Article: React.FC<ArticleProps> = ({ title, date, description }) => {
   return (
     <article>
-      <h3>{title}</h3>
+      <h3 className="my-2">{title}</h3>
       <p className=" text-sm text-stone-600">📅 {date.toDateString()}</p>
       <p>{description}</p>
       <Link variant="primary" href={`/blog/${slugify(title)}`}>

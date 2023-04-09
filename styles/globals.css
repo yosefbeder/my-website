@@ -15,12 +15,13 @@
 
 @layer components {
   h1 {
-    @apply text-5xl max-sm:text-4xl font-black text-slate-900;
+    @apply my-6 text-5xl max-sm:text-4xl font-black text-slate-900;
   }
 
   h2,
-  h3 {
-    @apply font-medium text-slate-800;
+  h3,
+  h4 {
+    @apply font-medium text-slate-800 my-4;
   }
 
   h2 {
@@ -31,18 +32,53 @@
     @apply text-2xl;
   }
 
+  h4 {
+    @apply text-xl;
+  }
+
   a {
     @apply text-amber-400 hover:text-amber-500 active:text-amber-600 underline transition-colors;
   }
 
-  p {
+  ul,
+  ol {
+    @apply list-inside pl-6 my-4;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  p,
+  li {
     @apply my-2;
+  }
+
+  code {
+    @apply bg-amber-100;
+  }
+
+  pre > code {
+    @apply bg-transparent;
   }
 }
 
 @layer utilities {
   .section {
-    @apply flex flex-col gap-6 max-md:gap-4 py-6 max-md:py-4;
+    @apply py-6 max-md:py-4;
+  }
+
+  .section > h1,
+  .section > h2 {
+    @apply mt-0 mb-6 max-md:mb-4;
+  }
+
+  .container {
+    @apply flex flex-col gap-6 max-md:gap-4;
   }
 
   .shiny {

@@ -57,7 +57,7 @@ const Header: React.FC = () => {
         alt="Portrait"
       />
       <div className="flex flex-col gap-6 max-md:gap-4 max-md:items-center inherit-transform-style">
-        <h1 className="text-stone-900 inherit-transform-style w-max">
+        <h1 className="my-0 text-stone-900 inherit-transform-style w-max">
           <span className="inline-block animate-[wave_1s_1s]">👋</span> Hey, I'm{" "}
           <strong className="inline-block shiny from-amber-600 via-amber-400 to-amber-600 bg-clip-text text-transparent animate-[shine_500ms_2s]">
             Yosef
@@ -86,40 +86,42 @@ const Work: React.FC = () => {
   return (
     <section className="section">
       <h2 className="text-center">Work</h2>
-      {work.map(({ name, screenshots, description, tech, link, code }) => (
-        <article className="relative max-w-screen-md w-full mx-auto pb-10 max-md:pb-0 max-md:shadow-lg max-md:rounded-md max-md:overflow-hidden">
-          <img
-            className="w-5/6 aspect-[16/10] max-md:w-full rounded-md max-md:rounded-none"
-            src={screenshots}
-            alt={`${name} screenshots`}
-          />
-          <div className="absolute right-0 bottom-0 max-md:relative flex flex-col gap-2 p-2 rounded-md max-md:rounded-none bg-white w-1/2 max-md:w-full shadow-lg max-md:shadow-none">
-            <h3>{name}</h3>
-            <div className="flex gap-2">
-              {tech.map((item) => {
-                const { color, icon: Icon } = techInfo.get(item)!;
-                return (
-                  <div
-                    className="p-1 rounded-md text-white"
-                    style={{ backgroundColor: color }}
-                  >
-                    <Icon />
-                  </div>
-                );
-              })}
+      <div className="container">
+        {work.map(({ name, screenshots, description, tech, link, code }) => (
+          <article className="relative max-w-screen-md w-full mx-auto pb-10 max-md:pb-0 max-md:shadow-lg max-md:rounded-md max-md:overflow-hidden">
+            <img
+              className="w-5/6 aspect-[16/10] max-md:w-full rounded-md max-md:rounded-none"
+              src={screenshots}
+              alt={`${name} screenshots`}
+            />
+            <div className="absolute right-0 bottom-0 max-md:relative flex flex-col gap-2 p-2 rounded-md max-md:rounded-none bg-white w-1/2 max-md:w-full shadow-lg max-md:shadow-none">
+              <h3 className="my-0">{name}</h3>
+              <div className="flex gap-2">
+                {tech.map((item) => {
+                  const { color, icon: Icon } = techInfo.get(item)!;
+                  return (
+                    <div
+                      className="p-1 rounded-md text-white"
+                      style={{ backgroundColor: color }}
+                    >
+                      <Icon />
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="my-0">{description}</p>
+              <div className="flex gap-2">
+                <Link variant="primary" href={link}>
+                  🔗 Visit
+                </Link>
+                <Link variant="secondary" href={code}>
+                  🧑‍💻 Code
+                </Link>
+              </div>
             </div>
-            <p className="my-0">{description}</p>
-            <div className="flex gap-2">
-              <Link variant="primary" href={link}>
-                🔗 Visit
-              </Link>
-              <Link variant="secondary" href={code}>
-                🧑‍💻 Code
-              </Link>
-            </div>
-          </div>
-        </article>
-      ))}
+          </article>
+        ))}
+      </div>
     </section>
   );
 };
@@ -128,16 +130,18 @@ const Writing: React.FC = () => {
   return (
     <section className="section">
       <h2 className="text-center">Writing</h2>
-      {blog
-        .slice(0, 3)
-        .map(({ title, date, description }) => ({
-          title,
-          date: new Date(date),
-          description,
-        }))
-        .map((article) => (
-          <Article {...article} />
-        ))}
+      <div className="container">
+        {blog
+          .slice(0, 3)
+          .map(({ title, date, description }) => ({
+            title,
+            date: new Date(date),
+            description,
+          }))
+          .map((article) => (
+            <Article {...article} />
+          ))}
+      </div>
     </section>
   );
 };

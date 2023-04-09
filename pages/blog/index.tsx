@@ -6,15 +6,17 @@ const Blog: NextPage = () => {
   return (
     <main className="section">
       <h1>Blog</h1>
-      {blog
-        .map(({ title, date, description }) => ({
-          title,
-          date: new Date(date),
-          description,
-        }))
-        .map((article) => (
-          <Article {...article} />
-        ))}
+      <div className="container">
+        {blog
+          .map(({ title, date, description }) => ({
+            title,
+            date: new Date(date),
+            description,
+          }))
+          .map((article) => (
+            <Article {...article} />
+          ))}
+      </div>
     </main>
   );
 };
