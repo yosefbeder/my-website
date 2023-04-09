@@ -1,10 +1,29 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import CSS3 from "../components/CSS3";
 import HTML5 from "../components/HTML5";
-import Article from "../components/Article";
+import BlogPost, { BlogPostProps } from "../components/BlogPost";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import Link from "../components/Link";
-import blog from "../data/blog.json";
+import { getBlogPosts } from "../utils/blog";
+
+interface HomeProps {
+  posts: BlogPostProps[];
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  return {
+    props: {
+      posts: (await getBlogPosts())
+        .map(({ slug, title, date, description }) => ({
+          slug,
+          title,
+          date,
+          description,
+        }))
+        .slice(0, 3),
+    },
+  };
+};
 
 const tags = [
   "💻 front-end developer",
@@ -126,32 +145,25 @@ const Work: React.FC = () => {
   );
 };
 
-const Writing: React.FC = () => {
+const Writing: React.FC<HomeProps> = ({ posts }) => {
   return (
     <section className="section">
       <h2 className="text-center">Writing</h2>
       <div className="container">
-        {blog
-          .slice(0, 3)
-          .map(({ title, date, description }) => ({
-            title,
-            date: new Date(date),
-            description,
-          }))
-          .map((article) => (
-            <Article {...article} />
-          ))}
+        {posts.map((post) => (
+          <BlogPost {...post} />
+        ))}
       </div>
     </section>
   );
 };
 
-const Home: NextPage = () => {
+const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <>
       <Header />
       <Work />
-      <Writing />
+      <Writing posts={posts} />
     </>
   );
 };

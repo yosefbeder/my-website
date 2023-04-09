@@ -1,4 +1,5 @@
 import React from "react";
+import NextLink from "next/link";
 
 interface LinkProps {
   variant: "primary" | "secondary" | "icon";
@@ -9,16 +10,15 @@ interface LinkProps {
 
 const Link: React.FC<LinkProps> = ({ variant, className, href, children }) => {
   return (
-    <a
+    <NextLink
       className={`${variant != "icon" ? "px-2 py-1" : "text-current"} ${
         variant == "primary" &&
         "bg-amber-400 hover:bg-amber-500 active:bg-amber-600 text-white hover:text-white active:text-white rounded-md no-underline"
       } ${className}`}
       href={href}
-      target="_blank"
     >
       {children}
-    </a>
+    </NextLink>
   );
 };
 

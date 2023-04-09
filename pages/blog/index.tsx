@@ -1,21 +1,35 @@
-import { NextPage } from "next";
-import Article from "../../components/Article";
-import blog from "../../data/blog.json";
+import { GetStaticProps, NextPage } from "next";
+import { BlogPostProps } from "../../components/BlogPost";
+import BlogPost from "../../components/BlogPost";
+import { getBlogPosts } from "../../utils/blog";
 
-const Blog: NextPage = () => {
+interface BlogProps {
+  posts: BlogPostProps[];
+}
+
+export const getStaticProps: GetStaticProps<BlogProps> = async () => {
+  return {
+    props: {
+      posts: (await getBlogPosts()).map(
+        ({ slug, title, date, description }) => ({
+          slug,
+          title,
+          date,
+          description,
+        })
+      ),
+    },
+  };
+};
+
+const Blog: NextPage<BlogProps> = ({ posts }) => {
   return (
     <main className="section">
       <h1>Blog</h1>
       <div className="container">
-        {blog
-          .map(({ title, date, description }) => ({
-            title,
-            date: new Date(date),
-            description,
-          }))
-          .map((article) => (
-            <Article {...article} />
-          ))}
+        {posts.map((post) => (
+          <BlogPost {...post} />
+        ))}
       </div>
     </main>
   );

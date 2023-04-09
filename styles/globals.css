@@ -63,7 +63,7 @@
   }
 
   pre > code {
-    @apply bg-transparent;
+    @apply rounded-md;
   }
 }
 
