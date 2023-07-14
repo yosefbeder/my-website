@@ -16,8 +16,11 @@ const BlogPost: React.FC<BlogPostProps> = ({
 }) => {
   return (
     <article>
-      <h3 className="my-2">{title}</h3>
-      <p className=" text-sm text-stone-600">📅 {date}</p>
+      <h3>
+        {title}
+        <br />
+        <span className="text-sm font-thin text-stone-600">📅 {date}</span>
+      </h3>
       <p>{description}</p>
       <Link variant="primary" href={`/blog/${slug}`}>
         📖 Read

@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    @apply bg-stone-50 text-stone-700;
+    @apply bg-white text-slate-700;
   }
 
   body {
@@ -37,7 +37,7 @@
   }
 
   a {
-    @apply text-amber-400 hover:text-amber-500 active:text-amber-600 underline transition-colors;
+    @apply text-emerald-400 hover:text-emerald-500 active:text-emerald-600 underline transition-colors;
   }
 
   ul,
@@ -53,13 +53,15 @@
     @apply list-decimal;
   }
 
+  ul,
+  ol,
   p,
   li {
-    @apply my-2;
+    @apply my-4;
   }
 
   code {
-    @apply bg-amber-100;
+    @apply bg-emerald-100;
   }
 
   pre > code {

@@ -44,7 +44,7 @@ const Nav = () => {
     <nav className="relative flex gap-[24px] w-fit max-md:mx-auto py-2">
       {navItems.has(pathname) && (
         <motion.div
-          className="absolute -z-10 h-[32px] rounded-md bg-amber-100"
+          className="absolute -z-10 h-[32px] rounded-md bg-emerald-100"
           initial={{
             left: navItems.get(pathname)!.x,
           }}

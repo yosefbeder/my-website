@@ -72,12 +72,15 @@ const Header: React.FC = () => {
     <header className="flex max-md:flex-col max-md:items-center gap-6 max-md:gap-4 py-6 max-md:py-4 perspective transform-center max-md:transform-75%">
       <img
         className="w-60 max-sm:w-48 rounded-full"
-        src="https://avatars.githubusercontent.com/u/78495625?v=4"
+        src="/avatar.jpeg"
         alt="Portrait"
       />
       <div className="flex flex-col gap-6 max-md:gap-4 max-md:items-center inherit-transform-style">
-        <h1 className="my-0 text-stone-900 inherit-transform-style w-max">
-          <span className="inline-block animate-[wave_1s_1s]">👋</span> Hey, I'm{" "}
+        <h1 className="my-0 inherit-transform-style w-max">
+          <span className="inline-block animate-[wave_1s_1s]">👋</span>{" "}
+          <span className="inline-block bg-gradient-to-r from-emerald-400 to-emerald-800 text-transparent bg-clip-text">
+            Hey, I'm
+          </span>{" "}
           <strong className="inline-block shiny from-amber-600 via-amber-400 to-amber-600 bg-clip-text text-transparent animate-[shine_500ms_2s]">
             Yosef
           </strong>
