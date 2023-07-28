@@ -72,7 +72,7 @@ const Header: React.FC = () => {
     <header className="flex max-md:flex-col max-md:items-center gap-6 max-md:gap-4 py-6 max-md:py-4 perspective transform-center max-md:transform-75%">
       <img
         className="w-60 max-sm:w-48 rounded-full"
-        src="/avatar.jpeg"
+        src="https://avatars.githubusercontent.com/u/78495625?v=4"
         alt="Portrait"
       />
       <div className="flex flex-col gap-6 max-md:gap-4 max-md:items-center inherit-transform-style">
