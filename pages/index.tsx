@@ -30,7 +30,7 @@ const tags = [
   "☕ coffee drinker ",
   "🎒 high school student",
   "🤓 maths geek",
-  "🌐 languages enthusiastic",
+  "🌐 languages enthusiast",
 ];
 
 enum Tech {
