@@ -35,7 +35,7 @@ const BlogPost: NextPage<BlogPostProps> = ({
       </Head>
       <main>
         <h1>{title}</h1>
-        <p className="text-sm text-stone-600">📅 {date}</p>
+        <p className="text-sm text-slate-600">📅 {date}</p>
         <p>{description}</p>
         <article dangerouslySetInnerHTML={{ __html: content }}></article>
       </main>
