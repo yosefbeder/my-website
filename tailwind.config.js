@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Poppins'", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-poppins)"],
       },
       keyframes: {
         wave: {

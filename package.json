@@ -6,11 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/font": "^14.2.5",
     "framer-motion": "^10.8.5",
+    "highlight.js": "^11.7.0",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "highlight.js": "^11.7.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
