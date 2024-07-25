@@ -5,6 +5,7 @@ import BlogPost, { BlogPostProps } from "../components/BlogPost";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import Link from "../components/Link";
 import { getBlogPosts } from "../utils/blog";
+import Head from "next/head";
 
 interface HomeProps {
   posts: BlogPostProps[];
@@ -164,6 +165,13 @@ const Writing: React.FC<HomeProps> = ({ posts }) => {
 const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <>
+      <Head>
+        <title>Yosef Beder</title>
+        <meta
+          name="description"
+          content="A high school student who likes coding."
+        />
+      </Head>
       <Header />
       <Work />
       <Writing posts={posts} />
