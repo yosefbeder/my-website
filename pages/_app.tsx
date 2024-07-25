@@ -14,11 +14,11 @@ const poppins = Poppins({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${poppins.variable} font-sans`}>
+    <div className={`${poppins.variable} font-sans`}>
       <Nav />
       <Component {...pageProps} />
       <Footer />
-    </main>
+    </div>
   );
 }
 
