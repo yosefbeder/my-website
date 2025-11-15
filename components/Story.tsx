@@ -1,0 +1,197 @@
+import Link from "next/link";
+import React from "react";
+import ArrowTopRightOnSquare from "./ArrowTopRightOnSquare";
+import PersonalOne from "../public/galary/2006 to 2021/personal-1.jpg";
+import PersonalTwo from "../public/galary/2006 to 2021/personal-2.jpg";
+import PersonalThree from "../public/galary/2006 to 2021/personal-3.jpg";
+import MasarFirstParty from "../public/galary/2024/masar-1st-party.jpg";
+import Poster from "../public/galary/2024/poster.jpg";
+import SheikAlAzhar from "../public/galary/2024/sheik-al-azhar.jpg";
+import FirstSemesterEnd from "../public/galary/2025/1st-semester-end.jpg";
+import Ahmed from "../public/galary/2025/ahmed.jpg";
+import FSPOne from "../public/galary/2025/fifth-settlement-party-1.jpg";
+import FSPTwo from "../public/galary/2025/fifth-settlement-party-2.jpg";
+import Minister from "../public/galary/2025/minister.jpg";
+import PODParty from "../public/galary/2025/pod-party.jpg";
+import PolaroidGallery from "./PolaroidGallery";
+
+const StoryLink = ({ href, children }: { href: string; children: string }) => (
+  <Link
+    href={href}
+    target="_blank"
+    className="inline-flex items-baseline text-blue-500 hover:text-blue-600 underline transition-colors font-medium"
+  >
+    <span>{children}</span>
+    <ArrowTopRightOnSquare />
+  </Link>
+);
+
+const timelineData = [
+  {
+    year: "2006 to 2021",
+    points: [
+      "Born on 20th March 2006.",
+      "Started to learn coding on 19th June 2020.",
+      <>
+        Learned frontend development basics and applied what I learned in{" "}
+        <StoryLink href="https://github.com/yosefbeder?tab=repositories">
+          23 GitHub repositories
+        </StoryLink>
+        .
+      </>,
+      <>
+        Applied the equations I learned in physics in{" "}
+        <StoryLink href="https://codesandbox.io/u/yosefbeder">
+          two simple projects
+        </StoryLink>
+        .
+      </>,
+    ],
+    images: [
+      { src: PersonalOne, alt: "Personal Photo 1" },
+      { src: PersonalTwo, alt: "Personal Photo 2" },
+      { src: PersonalThree, alt: "Personal Photo 3" },
+    ],
+  },
+  {
+    year: "2022",
+    points: [
+      "Ranked 2nd in my institute in my 1st high school year.",
+      <>
+        Did my first{" "}
+        <StoryLink href="https://github.com/rehypejs/rehype-document/issues/12">
+          GitHub contribution
+        </StoryLink>
+        .
+      </>,
+      <>
+        Read{" "}
+        <StoryLink href="https://craftinginterpreters.com/">
+          "Crafting Interpreters"
+        </StoryLink>{" "}
+        and created a{" "}
+        <StoryLink href="https://github.com/yosefbeder/qatam">
+          programming language in Rust
+        </StoryLink>
+        .
+      </>,
+    ],
+  },
+  {
+    year: "2023",
+    points: [
+      "Ranked 2nd in my institute in my 2nd year of high school.",
+      <>
+        Learned algorithms and data structures by taking{" "}
+        <StoryLink href="https://www.coursera.org/learn/algorithms-part1">
+          Algorithms, Part I
+        </StoryLink>{" "}
+        and{" "}
+        <StoryLink href="https://www.coursera.org/learn/algorithms-part2">
+          Algorithms, Part II
+        </StoryLink>{" "}
+        courses.
+      </>,
+      <>
+        Learned UX design basics by taking{" "}
+        <StoryLink href="https://www.coursera.org/learn/foundations-user-experience-design">
+          Foundations of User Experience (UX) Design
+        </StoryLink>{" "}
+        course.
+      </>,
+    ],
+  },
+  {
+    year: "2024",
+    points: [
+      "Ranked 5th in the Al-Azhar high school education system.",
+      "Ranked 1st in the Principles of Disease module.",
+      <>
+        Developed{" "}
+        <StoryLink href="https://doc-reader-guide.com/">
+          DocReader Guide
+        </StoryLink>{" "}
+        with my friends.
+      </>,
+    ],
+    images: [
+      { src: MasarFirstParty, alt: "Masar First Party" },
+      { src: Poster, alt: "Poster Presentation" },
+      { src: SheikAlAzhar, alt: "Meeting Sheikh Al-Azhar" },
+    ],
+  },
+  {
+    year: "2025",
+    points: [
+      "Ranked 2nd in my first year in medicine.",
+      "Participated in SciAsk Scientific Research Training (SRT) program.",
+      <>
+        Learned the basics of statistics and clinical research by taking{" "}
+        <StoryLink href="https://www.coursera.org/learn/clinical-research">
+          Understanding Clinical Research: Behind the Statistics
+        </StoryLink>{" "}
+        course.
+      </>,
+      "Learned the basics of prompt engineering.",
+      <>
+        Applied what I learned in{" "}
+        <StoryLink href="https://www.linkedin.com/in/yosefbeder/details/projects/">
+          these hobby projects
+        </StoryLink>
+        .
+      </>,
+    ],
+    images: [
+      { src: PODParty, alt: "Party at POD" },
+      { src: Minister, alt: "Meeting the Minister of Health" },
+      { src: FirstSemesterEnd, alt: "First Semester End Celebration" },
+      { src: Ahmed, alt: "With Ahmed" },
+      { src: FSPOne, alt: "Fifth Settlement Party 1" },
+      { src: FSPTwo, alt: "Fifth Settlement Party 2" },
+    ],
+  },
+];
+
+const Story = () => {
+  return (
+    <section className="section">
+      <h2 className="text-center">Story</h2>
+      <div className="relative">
+        <div className="absolute left-6 -translate-x-1/2 top-0 h-full w-0.5 bg-blue-50" />
+        <div className="space-y-6">
+          {timelineData.map((item, index) => (
+            <div key={index} className="relative pl-12">
+              {/* The Dot */}
+              <div className="absolute left-6 -translate-x-1/2 top-5 w-5 h-5 bg-blue-600 rounded-full border-2 border-white" />
+
+              {/* The Content */}
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="w-full md:w-1/6">
+                  <h3 className="text-blue-600">{item.year}</h3>
+                </div>
+
+                {/* Right Side: Card */}
+                <div className="w-full md:w-5/6">
+                  <div className="bg-blue-50 p-2 rounded-lg">
+                    <ul className="list-disc pl-5">
+                      {item.points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                    {item.images && item.images.length > 0 && (
+                      <div className="mt-6">
+                        <PolaroidGallery images={item.images} />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Story;

@@ -19,11 +19,11 @@ const BlogPost: React.FC<BlogPostProps> = ({
       <h3>
         {title}
         <br />
-        <span className="text-sm font-thin text-slate-600">📅 {date}</span>
+        <span className="text-sm font-thin text-slate-600">{date}</span>
       </h3>
       <p>{description}</p>
       <Link variant="primary" href={`/blog/${slug}`}>
-        📖 Read
+        Read
       </Link>
     </article>
   );

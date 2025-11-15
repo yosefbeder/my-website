@@ -14,13 +14,13 @@
 
 @layer components {
   h1 {
-    @apply my-6 text-5xl max-sm:text-4xl font-black text-slate-900;
+    @apply my-6 text-5xl font-black text-slate-900;
   }
 
   h2,
   h3,
   h4 {
-    @apply font-medium text-slate-800 my-4;
+    @apply text-slate-800 my-4 font-bold;
   }
 
   h2 {
@@ -36,7 +36,7 @@
   }
 
   a {
-    @apply text-emerald-500 hover:text-emerald-600 active:text-emerald-700 underline transition-colors;
+    @apply text-blue-500 hover:text-blue-600 active:text-blue-700 underline transition-colors;
   }
 
   ul,
@@ -60,7 +60,7 @@
   }
 
   code {
-    @apply bg-emerald-100;
+    @apply bg-blue-100;
   }
 
   pre > code {
