@@ -7,6 +7,7 @@ import PersonalThree from "../public/galary/2006 to 2021/personal-3.jpg";
 import MasarFirstParty from "../public/galary/2024/masar-1st-party.jpg";
 import Poster from "../public/galary/2024/poster.jpg";
 import SheikAlAzhar from "../public/galary/2024/sheik-al-azhar.jpg";
+import Ismail from "../public/galary/2024/ismail.jpg";
 import FirstSemesterEnd from "../public/galary/2025/1st-semester-end.jpg";
 import Ahmed from "../public/galary/2025/ahmed.jpg";
 import FSPOne from "../public/galary/2025/fifth-settlement-party-1.jpg";
@@ -118,6 +119,7 @@ const timelineData = [
       { src: MasarFirstParty, alt: "Masar First Party" },
       { src: Poster, alt: "Poster Presentation" },
       { src: SheikAlAzhar, alt: "Meeting Sheikh Al-Azhar" },
+      { src: Ismail, alt: "With both Ismails" },
     ],
   },
   {
