@@ -21,9 +21,12 @@ const StoryLink = ({ href, children }: { href: string; children: string }) => (
   <Link
     href={href}
     target="_blank"
-    className="inline-flex items-baseline text-blue-500 hover:text-blue-600 underline transition-colors font-medium"
+    // 1. Removed: inline-flex, items-baseline, underline
+    className="text-blue-500 hover:text-blue-600 transition-colors font-medium"
   >
-    <span>{children}</span>
+    {/* 2. Added underline here */}
+    <span className="underline">{children}</span>
+    {/* 3. Added classes to the icon to make it flow with the text */}
     <ArrowTopRightOnSquare />
   </Link>
 );
