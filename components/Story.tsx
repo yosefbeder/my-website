@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from "react";
 import ArrowTopRightOnSquare from "./ArrowTopRightOnSquare";
-import PersonalOne from "../public/galary/2006 to 2021/personal-1.jpg";
-import PersonalTwo from "../public/galary/2006 to 2021/personal-2.jpg";
-import PersonalThree from "../public/galary/2006 to 2021/personal-3.jpg";
+import Hamza from "../public/galary/2006 to 2021/hamza.png";
+import PersonalOne from "../public/galary/2023/personal-1.jpg";
+import PersonalTwo from "../public/galary/2023/personal-2.jpg";
+import PersonalThree from "../public/galary/2023/personal-3.jpg";
 import MasarFirstParty from "../public/galary/2024/masar-1st-party.jpg";
 import Poster from "../public/galary/2024/poster.jpg";
 import SheikAlAzhar from "../public/galary/2024/sheik-al-azhar.jpg";
@@ -48,11 +49,7 @@ const timelineData = [
         .
       </>,
     ],
-    images: [
-      { src: PersonalOne, alt: "Personal Photo 1" },
-      { src: PersonalTwo, alt: "Personal Photo 2" },
-      { src: PersonalThree, alt: "Personal Photo 3" },
-    ],
+    images: [{ src: Hamza, alt: "With Hamza" }],
   },
   {
     year: "2022",
@@ -100,6 +97,11 @@ const timelineData = [
         </StoryLink>{" "}
         course.
       </>,
+    ],
+    images: [
+      { src: PersonalOne, alt: "Personal Photo 1" },
+      { src: PersonalTwo, alt: "Personal Photo 2" },
+      { src: PersonalThree, alt: "Personal Photo 3" },
     ],
   },
   {
