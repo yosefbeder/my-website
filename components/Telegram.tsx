@@ -3,7 +3,7 @@ import React from "react";
 export default function Telegram() {
   return (
     <svg
-      className="w-8 max-sm:w-7"
+      className="w-8"
       role="img"
       viewBox="0 0 24 24"
       fill="currentColor"
