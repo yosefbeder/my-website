@@ -83,13 +83,76 @@ const Blog: React.FC<HomeProps> = ({ posts }) => {
 };
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
+  const pageTitle = "Yosef Beder";
+  const pageDescription =
+    "Meet Yosef Beder, a Medical Student and AI & Programming Enthusiast based in Egypt. Follow his journey as a USMLE Aspirant.";
+  const pageUrl = "https://yosefbeder.com";
+  const ogImage = `${pageUrl}/og-image.png`;
+
   return (
     <>
       <Head>
-        <title>Yosef Beder</title>
-        <meta
-          name="description"
-          content="A high school student who likes coding."
+        <title>{pageTitle}</title>
+        <link rel="canonical" href={pageUrl} />
+        <meta name="description" content={pageDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={ogImage} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Yosef Beder",
+              url: pageUrl,
+              image: `${pageUrl}/galary/avatar.png`,
+              jobTitle: [
+                "Medical Student",
+                "AI & Programming Enthusiast",
+                "USMLE Aspirant",
+              ],
+              description:
+                "Level-2 medical student at Al-Azhar University with 4+ years of coding experience. Co-developer of DocReader Guide (4,452+ active users), integrating Gen AI to add over 50,000 MCQ questions. I intend to pursue a career combining medicine and AI in the USA.", //
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "New Domiat",
+                addressRegion: "Dumyat",
+                addressCountry: "EG",
+              },
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+201019967816",
+                  contactType: "Mobile",
+                },
+                {
+                  "@type": "ContactPoint",
+                  email: "dryosefbeder@gmail.com",
+                  contactType: "Email",
+                },
+              ],
+              sameAs: [
+                "https://www.linkedin.com/in/yosefbeder",
+                "https://github.com/yosefbeder",
+                "https://t.me/yosefbeder",
+              ],
+              knowsLanguage: [
+                { "@type": "Language", name: "Arabic" },
+                { "@type": "Language", name: "English" },
+              ],
+              alumniOf: {
+                "@type": "EducationalOrganization",
+                name: "Al-Azhar University",
+              },
+            }),
+          }}
         />
       </Head>
       <Header />
