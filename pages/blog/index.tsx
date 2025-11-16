@@ -12,10 +12,11 @@ export const getStaticProps: GetStaticProps<BlogProps> = async () => {
   return {
     props: {
       posts: (await getBlogPosts()).map(
-        ({ slug, title, date, description }) => ({
+        ({ slug, title, date, lastModified, description }) => ({
           slug,
           title,
           date,
+          lastModified,
           description,
         })
       ),

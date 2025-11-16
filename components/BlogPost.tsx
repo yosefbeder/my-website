@@ -5,6 +5,7 @@ export interface BlogPostProps {
   slug: string;
   title: string;
   date: string;
+  lastModified: string;
   description: string;
 }
 

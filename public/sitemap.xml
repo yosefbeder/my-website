@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Static Pages -->
+    <url>
+      <loc>https://yosefbeder.com/</loc>
+      <lastmod>2025-11-16</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://yosefbeder.com/blog</loc>
+      <lastmod>2025-11-16</lastmod>
+      <priority>0.8</priority>
+    </url>
+    <!-- Dynamic Blog Pages -->
+    <url>
+      <loc>https://yosefbeder.com/blog/reflecting-on-my-first-1500-hours-of-coding</loc>
+      <lastmod>2021-11-13</lastmod>
+      <priority>0.6</priority>
+    </url>
+    <url>
+      <loc>https://yosefbeder.com/blog/how-to-prefetch-data-statically-in-regular-components</loc>
+      <lastmod>2021-10-21</lastmod>
+      <priority>0.6</priority>
+    </url>
+    <url>
+      <loc>https://yosefbeder.com/blog/implementing-undo-redo-in-a-drawing-app-with-redux</loc>
+      <lastmod>2021-09-26</lastmod>
+      <priority>0.6</priority>
+    </url>
+    <url>
+      <loc>https://yosefbeder.com/blog/how-do-i-approach-planning-projects</loc>
+      <lastmod>2021-09-18</lastmod>
+      <priority>0.6</priority>
+    </url>
+    <url>
+      <loc>https://yosefbeder.com/blog/how-to-implement-masonry-grid-in-react</loc>
+      <lastmod>2021-09-10</lastmod>
+      <priority>0.6</priority>
+    </url>
+</urlset>

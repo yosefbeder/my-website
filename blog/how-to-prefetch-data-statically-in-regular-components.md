@@ -2,6 +2,7 @@
 title: How to prefetch data statically in regular components?
 description: Prefetching data in a non-page component is not enjoyable to do, so I decided to share with you a better way of doing it with a node script!
 date: 2021-10-21
+lastModified: 2021-10-21
 ---
 
 ## Motivation

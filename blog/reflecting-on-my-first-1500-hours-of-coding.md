@@ -2,6 +2,7 @@
 title: Reflecting on my first 1,500 hours of programming!
 description: In this article, I go through my first 1,500 of programming, the resources I learned from, and some stuff that helped me to improve that may help you too.
 date: 2021-11-13
+lastModified: 2021-11-13
 ---
 
 ## Introduction

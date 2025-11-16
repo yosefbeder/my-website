@@ -2,6 +2,7 @@
 title: How to implement masonry grid in React?
 description: Mansory grid looks amazing and the latest versions of firefox started to support it, but at the moment you can't use the native option, so This article provides a solution.
 date: 2021-09-10
+lastModified: 2021-09-10
 ---
 
 ## The Problem

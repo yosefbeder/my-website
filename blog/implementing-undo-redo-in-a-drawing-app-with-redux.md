@@ -2,6 +2,7 @@
 title: Implementing undo/redo in a drawing app with Redux,
 description: undo/redo is a cool future to add in your apps and redux makes it easy, but how can I handle it when my state is huge, like in a drawing app for example?
 date: 2021-09-26
+lastModified: 2021-09-26
 ---
 
 ## The Problem

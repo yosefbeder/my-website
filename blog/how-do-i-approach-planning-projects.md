@@ -2,6 +2,7 @@
 title: How do I approach planning projects?
 description: Planning is the most important aspect of programming, and It's mostly a soft skill that you get by practicing, but In this article, I will tell you my journey planning apps and I will add a tutorial on how do I plan and organize my projects with Trello.
 date: 2021-09-18
+lastModified: 2021-09-18
 ---
 
 ## My Journey

@@ -11,6 +11,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  lastModified: string;
   description: string;
   content: string;
 }
@@ -40,6 +41,7 @@ export const getBlogPosts = async (): Promise<BlogPost[]> => {
         slug: fileName.replace(/\.md$/, ""),
         title: data.title,
         date: data.date,
+        lastModified: data.lastModified,
         description: data.description,
         content: processedContent.toString(),
       };
@@ -47,7 +49,11 @@ export const getBlogPosts = async (): Promise<BlogPost[]> => {
   );
 
   posts.sort((a, b) => b.date - a.date);
-  posts = posts.map((post) => ({ ...post, date: post.date.toDateString() }));
+  posts = posts.map((post) => ({
+    ...post,
+    date: post.date.toDateString(),
+    lastModified: post.lastModified.toDateString(),
+  }));
 
   cache = posts;
 

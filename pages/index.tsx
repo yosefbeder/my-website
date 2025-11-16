@@ -17,10 +17,11 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   return {
     props: {
       posts: (await getBlogPosts())
-        .map(({ slug, title, date, description }) => ({
+        .map(({ slug, title, date, lastModified, description }) => ({
           slug,
           title,
           date,
+          lastModified,
           description,
         }))
         .slice(0, 3),
