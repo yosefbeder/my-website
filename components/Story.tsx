@@ -21,12 +21,9 @@ const StoryLink = ({ href, children }: { href: string; children: string }) => (
   <Link
     href={href}
     target="_blank"
-    // 1. Removed: inline-flex, items-baseline, underline
     className="text-blue-500 hover:text-blue-600 transition-colors font-medium"
   >
-    {/* 2. Added underline here */}
     <span className="underline">{children}</span>
-    {/* 3. Added classes to the icon to make it flow with the text */}
     <ArrowTopRightOnSquare />
   </Link>
 );
@@ -68,7 +65,7 @@ const timelineData = [
       <>
         Read{" "}
         <StoryLink href="https://craftinginterpreters.com/">
-          "Crafting Interpreters"
+          Crafting Interpreters
         </StoryLink>{" "}
         and created a{" "}
         <StoryLink href="https://github.com/yosefbeder/qatam">
@@ -121,10 +118,10 @@ const timelineData = [
       </>,
     ],
     images: [
-      { src: MasarFirstParty, alt: "Masar First Party" },
       { src: Poster, alt: "Poster Presentation" },
-      { src: SheikAlAzhar, alt: "Meeting Sheikh Al-Azhar" },
       { src: Ismail, alt: "With both Ismails" },
+      { src: SheikAlAzhar, alt: "Meeting Sheikh Al-Azhar" },
+      { src: MasarFirstParty, alt: "Masar First Party" },
     ],
   },
   {
@@ -149,9 +146,9 @@ const timelineData = [
       </>,
     ],
     images: [
+      { src: FirstSemesterEnd, alt: "First Semester End Celebration" },
       { src: PODParty, alt: "Party at POD" },
       { src: Minister, alt: "Meeting the Minister of Health" },
-      { src: FirstSemesterEnd, alt: "First Semester End Celebration" },
       { src: Ahmed, alt: "With Ahmed" },
       { src: FSPOne, alt: "Fifth Settlement Party 1" },
       { src: FSPTwo, alt: "Fifth Settlement Party 2" },
