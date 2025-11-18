@@ -31,21 +31,19 @@ const timelineData = [
   {
     year: "2006 to 2021",
     points: [
-      "Born on 20th March 2006.",
-      "Started to learn coding on 19th June 2020.",
+      "Born on 20th March 2006",
+      "Started to learn coding on 19th June 2020",
       <>
         Learned frontend development basics and applied what I learned in{" "}
         <StoryLink href="https://github.com/yosefbeder?tab=repositories">
           23 GitHub repositories
         </StoryLink>
-        .
       </>,
       <>
         Applied the equations I learned in physics in{" "}
         <StoryLink href="https://codesandbox.io/u/yosefbeder">
           two simple projects
         </StoryLink>
-        .
       </>,
     ],
     images: [{ src: Hamza, alt: "With Hamza" }],
@@ -53,13 +51,12 @@ const timelineData = [
   {
     year: "2022",
     points: [
-      "Ranked 2nd in my institute in my 1st high school year.",
+      "Ranked 2nd in my institute in my 1st high school year",
       <>
         Did my first{" "}
         <StoryLink href="https://github.com/rehypejs/rehype-document/issues/12">
           GitHub contribution
         </StoryLink>
-        .
       </>,
       <>
         Read{" "}
@@ -70,14 +67,13 @@ const timelineData = [
         <StoryLink href="https://github.com/yosefbeder/qatam">
           programming language in Rust
         </StoryLink>
-        .
       </>,
     ],
   },
   {
     year: "2023",
     points: [
-      "Ranked 2nd in my institute in my 2nd year of high school.",
+      "Ranked 2nd in my institute in my 2nd year of high school",
       <>
         Learned algorithms and data structures by taking{" "}
         <StoryLink href="https://www.coursera.org/learn/algorithms-part1">
@@ -87,14 +83,14 @@ const timelineData = [
         <StoryLink href="https://www.coursera.org/learn/algorithms-part2">
           Algorithms, Part II
         </StoryLink>{" "}
-        courses.
+        courses
       </>,
       <>
         Learned UX design basics by taking{" "}
         <StoryLink href="https://www.coursera.org/learn/foundations-user-experience-design">
           Foundations of User Experience (UX) Design
         </StoryLink>{" "}
-        course.
+        course
       </>,
     ],
     images: [
@@ -105,14 +101,14 @@ const timelineData = [
   {
     year: "2024",
     points: [
-      "Ranked 5th in the Al-Azhar high school education system.",
-      "Ranked 1st in the Principles of Disease module.",
+      "Ranked 5th in the Al-Azhar high school education system",
+      "Ranked 1st in the Principles of Disease module",
       <>
         Developed{" "}
         <StoryLink href="https://doc-reader-guide.com/">
           DocReader Guide
         </StoryLink>{" "}
-        with my friends.
+        with my friends
       </>,
     ],
     images: [
@@ -125,22 +121,21 @@ const timelineData = [
   {
     year: "2025",
     points: [
-      "Ranked 2nd in my first year in medicine.",
-      "Participated in SciAsk Scientific Research Training (SRT) program.",
+      "Ranked 2nd in my first year in medicine",
+      "Participated in SciAsk Scientific Research Training (SRT) program",
       <>
         Learned the basics of statistics and clinical research by taking{" "}
         <StoryLink href="https://www.coursera.org/learn/clinical-research">
           Understanding Clinical Research: Behind the Statistics
         </StoryLink>{" "}
-        course.
+        course
       </>,
-      "Learned the basics of prompt engineering.",
+      "Learned the basics of prompt engineering",
       <>
         Applied what I learned in{" "}
         <StoryLink href="https://www.linkedin.com/in/yosefbeder/details/projects/">
           these hobby projects
         </StoryLink>
-        .
       </>,
     ],
     images: [
@@ -163,18 +158,14 @@ const Story = () => {
         <div className="space-y-6">
           {timelineData.map((item, index) => (
             <div key={index} className="relative pl-12">
-              {/* The Dot */}
               <div className="absolute left-6 -translate-x-1/2 top-5 w-5 h-5 bg-blue-600 rounded-full border-2 border-white" />
-
-              {/* The Content */}
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-full md:w-1/6">
                   <h3 className="text-blue-600">{item.year}</h3>
                 </div>
-
-                {/* Right Side: Card */}
                 <div className="w-full md:w-5/6">
                   <div className="bg-blue-50 p-2 rounded-lg">
+                    <span>Alhamdulillah:</span>
                     <ul className="list-disc pl-5">
                       {item.points.map((point, i) => (
                         <li key={i}>{point}</li>
