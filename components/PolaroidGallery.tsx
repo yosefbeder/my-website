@@ -10,8 +10,7 @@ const PolaroidGallery = ({
   if (!images || images.length === 0) return null;
 
   return (
-    // Added pt-4 to give clips room, and increased gap
-    <div className="flex flex-wrap justify-center gap-10 mt-6 pt-4">
+    <div className="flex flex-wrap justify-center gap-6 mt-6 mb-4">
       {images.map((image, idx) => (
         <div
           key={idx}
@@ -28,11 +27,10 @@ const PolaroidGallery = ({
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 text-blue-600">
             <PaperClip />
           </div>
-
           <Image
             src={image.src}
             alt={image.alt}
-            className="w-44 h-auto rounded-md"
+            className="w-52 h-auto rounded-md"
           />
         </div>
       ))}
