@@ -164,7 +164,7 @@ const Story = () => {
                   <h3 className="text-blue-600">{item.year}</h3>
                 </div>
                 <div className="w-full md:w-5/6">
-                  <div className="bg-blue-50 p-2 rounded-lg">
+                  <div className="bg-blue-50 p-2 rounded-2xl">
                     <span>Alhamdulillah:</span>
                     <ul className="list-disc pl-5">
                       {item.points.map((point, i) => (

@@ -8,6 +8,8 @@ import { getBlogPosts } from "../utils/blog";
 import Image from "next/image";
 import MapPin from "../components/MapPin";
 import Story from "../components/Story";
+import DrAlaaAvatar from "../public/galary/dr-alaa-eissa.jpeg";
+import Testimonial from "../components/Testimonial";
 
 interface HomeProps {
   posts: BlogPostProps[];
@@ -67,6 +69,22 @@ const Header: React.FC = () => {
         <SocialMediaIcons />
       </div>
     </header>
+  );
+};
+
+const Testimonials: React.FC = () => {
+  return (
+    <section className="section">
+      <h2 className="text-center">Testimonials</h2>
+      <Testimonial
+        author="Dr. Alaa Eissa"
+        affiliation="Head of Pharmacology Department"
+        avatar={DrAlaaAvatar}
+        text="I am truly impressed by your way of thinking, Yosef, and how you support your colleagues. You are excellent, and I predict a promising future for you in Pharmacology."
+        context="Feedback received after creating several video tutorials on my iPad helping my colleagues in a WhatsApp group supervised by the doctor."
+        recording="/audio/dr-alaa-eissa.mp3"
+      />
+    </section>
   );
 };
 
@@ -158,6 +176,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
       </Head>
       <Header />
       <Story />
+      <Testimonials />
       <Blog posts={posts} />
     </>
   );
