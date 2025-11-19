@@ -51,7 +51,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
         <h1>Blog</h1>
         <div className="container">
           {posts.map((post) => (
-            <BlogPost {...post} />
+            <BlogPost key={post.slug} {...post} />
           ))}
         </div>
       </main>

@@ -94,7 +94,7 @@ const Blog: React.FC<HomeProps> = ({ posts }) => {
       <h2 className="text-center">Blog</h2>
       <div className="container">
         {posts.map((post) => (
-          <BlogPost {...post} />
+          <BlogPost key={post.slug} {...post} />
         ))}
       </div>
     </section>
