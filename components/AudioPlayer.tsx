@@ -87,13 +87,6 @@ export default function AudioPlayer({ src }: { src: string }) {
     setCurrentTime(0);
   };
 
-  const onLoadedMetadata = () => {
-    console.log("loaded");
-    if (audioRef.current) {
-      setDuration(audioRef.current.duration);
-    }
-  };
-
   const formatTime = (time: number) => {
     if (!time || isNaN(time)) return "0:00";
     const minutes = Math.floor(time / 60);
@@ -107,6 +100,7 @@ export default function AudioPlayer({ src }: { src: string }) {
         ref={audioRef}
         src={src}
         onEnded={onEnded}
+        onTimeUpdate={onTimeUpdate}
         className="hidden"
         preload="metadata"
       />
