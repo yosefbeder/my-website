@@ -17,7 +17,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
 }) => {
   return (
     <article>
-      <h3>
+      <h3 className="mt-0">
         {title}
         <br />
         <span className="text-sm font-thin text-slate-600">{date}</span>
