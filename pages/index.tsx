@@ -123,7 +123,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         <title>{pageTitle}</title>
         <link rel="canonical" href={pageUrl} />
         <meta name="description" content={pageDescription} />
-        <meta name="thumbnail" content={`${pageUrl}/galary/avatar.png`} />
+        <meta name="thumbnail" content={`${pageUrl}/galary/avatar.jpg`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={pageUrl} />
@@ -144,7 +144,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
                   "@id": pageUrl,
                   primaryImageOfPage: {
                     "@type": "ImageObject",
-                    url: `${pageUrl}/galary/avatar.png`,
+                    url: `${pageUrl}/galary/avatar.jpg`,
                     caption: "Yosef Beder",
                   },
                 },
