@@ -7,7 +7,7 @@ interface TestimonialProps {
   avatar: StaticImageData | string;
   affiliation: string;
   text: string;
-  context?: string;
+  context?: string | JSX.Element;
   recording?: string;
 }
 

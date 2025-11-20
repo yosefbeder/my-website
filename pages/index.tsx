@@ -10,6 +10,7 @@ import MapPin from "../components/MapPin";
 import Story from "../components/Story";
 import DrAlaaAvatar from "../public/galary/dr-alaa-eissa.jpeg";
 import Testimonial from "../components/Testimonial";
+import ArrowLink from "../components/ArrowLink";
 
 interface HomeProps {
   posts: BlogPostProps[];
@@ -81,7 +82,15 @@ const Testimonials: React.FC = () => {
         affiliation="Head of Pharmacology Department"
         avatar={DrAlaaAvatar}
         text="I am truly impressed by your way of thinking, Yosef, and how you support your colleagues. You are excellent, and I predict a promising future for you in Pharmacology."
-        context="Feedback received after creating several video tutorials on my iPad helping my colleagues in a WhatsApp group supervised by the doctor."
+        context={
+          <>
+            Feedback received after creating{" "}
+            <ArrowLink href="https://t.me/DocReader_Guide_2/710">
+              video tutorials on my iPad
+            </ArrowLink>{" "}
+            helping my colleagues in a WhatsApp group supervised by the doctor.
+          </>
+        }
         recording="/audio/dr-alaa-eissa.mp3"
       />
     </section>

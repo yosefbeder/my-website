@@ -1,6 +1,3 @@
-import Link from "next/link";
-import React from "react";
-import ArrowTopRightOnSquare from "./ArrowTopRightOnSquare";
 import Hamza from "../public/galary/2006 to 2021/hamza.png";
 import PersonalOne from "../public/galary/2023/personal-1.jpg";
 import PersonalTwo from "../public/galary/2023/personal-2.jpg";
@@ -15,17 +12,7 @@ import FSPTwo from "../public/galary/2025/fifth-settlement-party-2.jpg";
 import Minister from "../public/galary/2025/minister.jpg";
 import PODParty from "../public/galary/2025/pod-party.jpg";
 import PolaroidGallery from "./PolaroidGallery";
-
-const StoryLink = ({ href, children }: { href: string; children: string }) => (
-  <Link
-    href={href}
-    target="_blank"
-    className="text-blue-500 hover:text-blue-600 transition-colors font-medium"
-  >
-    <span className="underline">{children}</span>
-    <ArrowTopRightOnSquare />
-  </Link>
-);
+import ArrowLink from "./ArrowLink";
 
 const timelineData = [
   {
@@ -35,15 +22,15 @@ const timelineData = [
       "Started to learn coding on 19th June 2020",
       <>
         Learned frontend development basics and applied what I learned in{" "}
-        <StoryLink href="https://github.com/yosefbeder?tab=repositories">
+        <ArrowLink href="https://github.com/yosefbeder?tab=repositories">
           23 GitHub repositories
-        </StoryLink>
+        </ArrowLink>
       </>,
       <>
         Applied the equations I learned in physics in{" "}
-        <StoryLink href="https://codesandbox.io/u/yosefbeder">
+        <ArrowLink href="https://codesandbox.io/u/yosefbeder">
           two simple projects
-        </StoryLink>
+        </ArrowLink>
       </>,
     ],
     images: [{ src: Hamza, alt: "With Hamza" }],
@@ -54,19 +41,19 @@ const timelineData = [
       "Ranked 2nd in my institute in my 1st high school year",
       <>
         Did my first{" "}
-        <StoryLink href="https://github.com/rehypejs/rehype-document/issues/12">
+        <ArrowLink href="https://github.com/rehypejs/rehype-document/issues/12">
           GitHub contribution
-        </StoryLink>
+        </ArrowLink>
       </>,
       <>
         Read{" "}
-        <StoryLink href="https://craftinginterpreters.com/">
+        <ArrowLink href="https://craftinginterpreters.com/">
           Crafting Interpreters
-        </StoryLink>{" "}
+        </ArrowLink>{" "}
         and created a{" "}
-        <StoryLink href="https://github.com/yosefbeder/qatam">
+        <ArrowLink href="https://github.com/yosefbeder/qatam">
           programming language in Rust
-        </StoryLink>
+        </ArrowLink>
       </>,
     ],
   },
@@ -76,20 +63,20 @@ const timelineData = [
       "Ranked 2nd in my institute in my 2nd year of high school",
       <>
         Learned algorithms and data structures by taking{" "}
-        <StoryLink href="https://www.coursera.org/learn/algorithms-part1">
+        <ArrowLink href="https://www.coursera.org/learn/algorithms-part1">
           Algorithms, Part I
-        </StoryLink>{" "}
+        </ArrowLink>{" "}
         and{" "}
-        <StoryLink href="https://www.coursera.org/learn/algorithms-part2">
+        <ArrowLink href="https://www.coursera.org/learn/algorithms-part2">
           Algorithms, Part II
-        </StoryLink>{" "}
+        </ArrowLink>{" "}
         courses
       </>,
       <>
         Learned UX design basics by taking{" "}
-        <StoryLink href="https://www.coursera.org/learn/foundations-user-experience-design">
+        <ArrowLink href="https://www.coursera.org/learn/foundations-user-experience-design">
           Foundations of User Experience (UX) Design
-        </StoryLink>{" "}
+        </ArrowLink>{" "}
         course
       </>,
     ],
@@ -105,9 +92,9 @@ const timelineData = [
       "Ranked 1st in the Principles of Disease module",
       <>
         Developed{" "}
-        <StoryLink href="https://doc-reader-guide.com/">
+        <ArrowLink href="https://doc-reader-guide.com/">
           DocReader Guide
-        </StoryLink>{" "}
+        </ArrowLink>{" "}
         with my friends
       </>,
     ],
@@ -125,17 +112,17 @@ const timelineData = [
       "Participated in SciAsk Scientific Research Training (SRT) program",
       <>
         Learned the basics of statistics and clinical research by taking{" "}
-        <StoryLink href="https://www.coursera.org/learn/clinical-research">
+        <ArrowLink href="https://www.coursera.org/learn/clinical-research">
           Understanding Clinical Research: Behind the Statistics
-        </StoryLink>{" "}
+        </ArrowLink>{" "}
         course
       </>,
       "Learned the basics of prompt engineering",
       <>
         Applied what I learned in{" "}
-        <StoryLink href="https://www.linkedin.com/in/yosefbeder/details/projects/">
+        <ArrowLink href="https://www.linkedin.com/in/yosefbeder/details/projects/">
           these hobby projects
-        </StoryLink>
+        </ArrowLink>
       </>,
     ],
     images: [
