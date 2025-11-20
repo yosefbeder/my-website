@@ -123,6 +123,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         <title>{pageTitle}</title>
         <link rel="canonical" href={pageUrl} />
         <meta name="description" content={pageDescription} />
+        <meta name="thumbnail" content={`${pageUrl}/galary/avatar.png`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={pageUrl} />
@@ -137,48 +138,61 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Yosef Beder",
-              url: pageUrl,
-              image: `${pageUrl}/galary/avatar.png`,
-              jobTitle: [
-                "Medical Student",
-                "AI & Programming Enthusiast",
-                "USMLE Aspirant",
-              ],
-              description:
-                "Level-2 medical student at Al-Azhar University with 4+ years of coding experience. Co-developer of DocReader Guide (4,452+ active users), integrating Gen AI to add over 50,000 MCQ questions. I intend to pursue a career combining medicine and AI in the USA.", //
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "New Domiat",
-                addressRegion: "Dumyat",
-                addressCountry: "EG",
-              },
-              contactPoint: [
+              "@graph": [
                 {
-                  "@type": "ContactPoint",
-                  telephone: "+201019967816",
-                  contactType: "Mobile",
+                  "@type": "WebPage",
+                  "@id": pageUrl,
+                  primaryImageOfPage: {
+                    "@type": "ImageObject",
+                    url: `${pageUrl}/galary/avatar.png`,
+                    caption: "Yosef Beder",
+                  },
                 },
                 {
-                  "@type": "ContactPoint",
-                  email: "dryosefbeder@gmail.com",
-                  contactType: "Email",
+                  "@type": "Person",
+                  name: "Yosef Beder",
+                  url: pageUrl,
+                  image: `${pageUrl}/galary/avatar.png`,
+                  jobTitle: [
+                    "Medical Student",
+                    "AI & Programming Enthusiast",
+                    "USMLE Aspirant",
+                  ],
+                  description:
+                    "Level-2 medical student at Al-Azhar University with 4+ years of coding experience. Co-developer of DocReader Guide (4,452+ active users), integrating Gen AI to add over 50,000 MCQ questions. I intend to pursue a career combining medicine and AI in the USA.", //
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "New Domiat",
+                    addressRegion: "Dumyat",
+                    addressCountry: "EG",
+                  },
+                  contactPoint: [
+                    {
+                      "@type": "ContactPoint",
+                      telephone: "+201019967816",
+                      contactType: "Mobile",
+                    },
+                    {
+                      "@type": "ContactPoint",
+                      email: "dryosefbeder@gmail.com",
+                      contactType: "Email",
+                    },
+                  ],
+                  sameAs: [
+                    "https://www.linkedin.com/in/yosefbeder",
+                    "https://github.com/yosefbeder",
+                    "https://t.me/yosefbeder",
+                  ],
+                  knowsLanguage: [
+                    { "@type": "Language", name: "Arabic" },
+                    { "@type": "Language", name: "English" },
+                  ],
+                  alumniOf: {
+                    "@type": "EducationalOrganization",
+                    name: "Al-Azhar University",
+                  },
                 },
               ],
-              sameAs: [
-                "https://www.linkedin.com/in/yosefbeder",
-                "https://github.com/yosefbeder",
-                "https://t.me/yosefbeder",
-              ],
-              knowsLanguage: [
-                { "@type": "Language", name: "Arabic" },
-                { "@type": "Language", name: "English" },
-              ],
-              alumniOf: {
-                "@type": "EducationalOrganization",
-                name: "Al-Azhar University",
-              },
             }),
           }}
         />
