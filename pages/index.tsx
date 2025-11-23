@@ -111,7 +111,8 @@ const Blog: React.FC<HomeProps> = ({ posts }) => {
 };
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
-  const pageTitle = "Yosef Beder";
+  const pageTitle =
+    "Yosef Beder - Medical Student | AI & Programming Enthusiast";
   const pageDescription =
     "Meet Yosef Beder, a Medical Student and AI & Programming Enthusiast based in Egypt. Follow his journey as a USMLE Aspirant.";
   const pageUrl = "https://yosefbeder.com";
