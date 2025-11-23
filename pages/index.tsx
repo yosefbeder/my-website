@@ -45,7 +45,8 @@ const Header: React.FC = () => {
         <Image
           className="absolute z-10 top-0 left-0 w-60 h-60 rounded-full"
           src={Avatar}
-          alt="Portrait"
+          priority
+          alt="Portrait of Yosef Beder, a Medical Student, AI & Programming Enthusiast, and USMLE Aspirant"
         />
         <div className="absolute w-full h-full rounded-full -bottom-16 bg-blue-200"></div>
         <div className="absolute w-full h-full rounded-full -bottom-24 bg-blue-400"></div>

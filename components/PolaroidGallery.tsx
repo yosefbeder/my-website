@@ -5,7 +5,7 @@ import PaperClip from "../components/PaperClip";
 const PolaroidGallery = ({
   images,
 }: {
-  images: { src: StaticImageData; alt: string }[];
+  images: { src: StaticImageData; alt: string; title: string }[];
 }) => {
   if (!images || images.length === 0) return null;
 
@@ -30,6 +30,8 @@ const PolaroidGallery = ({
           <Image
             src={image.src}
             alt={image.alt}
+            title={image.title}
+            placeholder="blur"
             className="w-52 h-auto rounded-md"
           />
         </div>

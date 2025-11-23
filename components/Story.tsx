@@ -33,7 +33,13 @@ const timelineData = [
         </ArrowLink>
       </>,
     ],
-    images: [{ src: Hamza, alt: "With Hamza" }],
+    images: [
+      {
+        src: Hamza,
+        alt: "Yosef Beder with Hamza, his cousin",
+        title: "With Hamza, my cousin",
+      },
+    ],
   },
   {
     year: "2022",
@@ -81,8 +87,16 @@ const timelineData = [
       </>,
     ],
     images: [
-      { src: PersonalOne, alt: "Personal Photo 1" },
-      { src: PersonalTwo, alt: "Personal Photo 2" },
+      {
+        src: PersonalOne,
+        alt: "Yosef Beder standing outdoors in a casual setting",
+        title: "Yosef Beder",
+      },
+      {
+        src: PersonalTwo,
+        alt: "Casual photo of Yosef Beder smiling outdoors",
+        title: "Yosef Beder",
+      },
     ],
   },
   {
@@ -99,10 +113,26 @@ const timelineData = [
       </>,
     ],
     images: [
-      { src: Poster, alt: "Poster Presentation" },
-      { src: Ismail, alt: "With both Ismails" },
-      { src: SheikAlAzhar, alt: "Meeting Sheikh Al-Azhar" },
-      { src: MasarFirstParty, alt: "Masar First Party" },
+      {
+        src: Poster,
+        alt: "Official Al-Azhar poster declaring Yosef Beder national rank",
+        title: "Al-Azhar official poster",
+      },
+      {
+        src: Ismail,
+        alt: "Yosef Beder standing with colleagues, Ismails",
+        title: "With my colleagues, the Ismails",
+      },
+      {
+        src: SheikAlAzhar,
+        alt: "Yosef Beder meeting with the Grand Imam of Al-Azhar",
+        title: "Meeting Sheikh Al-Azhar",
+      },
+      {
+        src: MasarFirstParty,
+        alt: "Yosef Beder wearing graduation gown at Egypt Post 1st celebration",
+        title: "Egypt Post 1st Celebration",
+      },
     ],
   },
   {
@@ -126,12 +156,36 @@ const timelineData = [
       </>,
     ],
     images: [
-      { src: FirstSemesterEnd, alt: "First Semester End Celebration" },
-      { src: PODParty, alt: "Party at POD" },
-      { src: Minister, alt: "Meeting the Minister of Health" },
-      { src: Ahmed, alt: "With Ahmed" },
-      { src: FSPOne, alt: "Fifth Settlement Party 1" },
-      { src: FSPTwo, alt: "Fifth Settlement Party 2" },
+      {
+        src: FirstSemesterEnd,
+        alt: "Group photo of medical students celebrating end of semester 1",
+        title: "End of Semester 1 Celebration",
+      },
+      {
+        src: PODParty,
+        alt: "Yosef Beder receiving certificate for ranking 1st in Principle of Disease module",
+        title: "POD Party Celebration",
+      },
+      {
+        src: Minister,
+        alt: "Yosef Beder receiving recognition from the Minister of High Education",
+        title: "Meeting the Minister of High Education",
+      },
+      {
+        src: Ahmed,
+        alt: "Yosef Beder and his friend Ahmed",
+        title: "With Ahmed, my friend",
+      },
+      {
+        src: FSPOne,
+        alt: "Yosef Beder eating dinner with the other top national students",
+        title: "Egypt Post 2nd Celebration",
+      },
+      {
+        src: FSPTwo,
+        alt: "Group photo of Yosef Beder with the other top national students",
+        title: "Egypt Post 2nd Celebration",
+      },
     ],
   },
 ];

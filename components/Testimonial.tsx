@@ -29,7 +29,12 @@ const Testimonial: React.FC<TestimonialProps> = ({
       {recording && <AudioPlayer src={recording} />}
       <div className="flex gap-2 justify-center">
         <div className="shrink-0 w-14 h-14 rounded-full border-2 border-blue-600 overflow-hidden">
-          <Image className="w-14 h-14" src={avatar} alt={author} />
+          <Image
+            className="w-14 h-14"
+            src={avatar}
+            alt={`Professional headshot of ${author}`}
+            title={author}
+          />
         </div>
         <div className="flex flex-col justify-center">
           <h3 className="my-0">{author}</h3>
