@@ -137,7 +137,7 @@ const timelineData = [
   {
     year: "2025",
     points: [
-      "Started going to GYM on 16th May 2025",
+      "Started going to the GYM on 16th May 2025",
       "Ranked 2nd in my first year in medicine",
       "Participated in SciAsk Scientific Research Training (SRT) program",
       <>
