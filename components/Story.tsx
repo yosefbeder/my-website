@@ -166,11 +166,6 @@ const timelineData = [
         title: "Meeting the Minister of High Education",
       },
       {
-        src: Ahmed,
-        alt: "Yosef Beder and his friend Ahmed",
-        title: "With Ahmed, my friend",
-      },
-      {
         src: FSPOne,
         alt: "Yosef Beder eating dinner with the other top national students",
         title: "Egypt Post 2nd Celebration",
@@ -179,6 +174,11 @@ const timelineData = [
         src: FSPTwo,
         alt: "Group photo of Yosef Beder with the other top national students",
         title: "Egypt Post 2nd Celebration",
+      },
+      {
+        src: Ahmed,
+        alt: "Yosef Beder and his friend Ahmed",
+        title: "With Ahmed, my friend",
       },
     ],
   },
