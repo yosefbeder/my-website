@@ -5,7 +5,6 @@ import MasarFirstParty from "../public/galary/2024/masar-1st-party.jpg";
 import Poster from "../public/galary/2024/poster.jpg";
 import SheikAlAzhar from "../public/galary/2024/sheik-al-azhar.jpg";
 import Ismail from "../public/galary/2024/ismail.jpg";
-import FirstSemesterEnd from "../public/galary/2025/1st-semester-end.jpg";
 import Ahmed from "../public/galary/2025/ahmed.jpg";
 import FSPOne from "../public/galary/2025/fifth-settlement-party-1.jpg";
 import FSPTwo from "../public/galary/2025/fifth-settlement-party-2.jpg";
@@ -156,11 +155,6 @@ const timelineData = [
       </>,
     ],
     images: [
-      {
-        src: FirstSemesterEnd,
-        alt: "Group photo of medical students celebrating end of semester 1",
-        title: "End of Semester 1 Celebration",
-      },
       {
         src: PODParty,
         alt: "Yosef Beder receiving certificate for ranking 1st in Principle of Disease module",
